@@ -4,15 +4,15 @@ import streamlit as st
 
 st.title("Проверка контрольной")
 
-a = st.number_input("$a$", value=7)
+a = st.number_input("$a$", value=-2)
 b = st.number_input("$b$", value=1)
-c = st.number_input("$c$", value=4)
+c = st.number_input("$c$", value=-7)
 d = st.number_input("$d$", value=3)
-s1 = st.number_input("$s_1$", value=1)
-s2 = st.number_input("$s_2$", value=-1)
-s3 = st.number_input("$s_3$", value=2)
+s1 = st.number_input("$s_1$", value=-1)
+s2 = st.number_input("$s_2$", value=-2)
+s3 = st.number_input("$s_3$", value=-2)
 y0 = -s1 * s2 * s3
-y1 = -s2 * s3 + s1 * s3 + s1 * s2
+y1 = s2 * s3 + s1 * s3 + s1 * s2
 y2 = -s3 - s2 - s1
 l1 = (a + y0) / (a * d)
 l2 = 1 / d * (c + y2)
@@ -45,10 +45,14 @@ css = f"""
 st.html(f"<style>{css}</style>")
 st.latex(
     f"""
+    
 \\begin{{align*}}
 l_1 = {l1_res} \\\\
 l_2 = {l2_res} \\\\
 l_3 = {l3_res} \\\\
+\\gamma_0= {y0} \\\\
+\\gamma_1= {y1} \\\\
+\\gamma_2= {y2} \\\\
 \\end{{align*}} 
 """
 )
