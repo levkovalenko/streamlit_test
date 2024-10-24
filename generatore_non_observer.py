@@ -50,4 +50,7 @@ while True:
         latex_eq(f"C = {printing.latex(symC)}")
         for i, si in enumerate(zlay_point):
             latex_eq(f"s_{i} = {si}")
+
+        st.write(f"A = {printing.latex(symA)}")
+        st.write(f"C = {printing.latex(symC)}")
         break
