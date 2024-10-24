@@ -3,7 +3,7 @@ import streamlit as st
 import sympy as sym
 from sympy import printing
 
-st.title("Проверка контрольной")
+st.title("Генератор не наблюдаемых матриц")
 css = f"""
     div.math-display {{
         font-size: {2}rem;
