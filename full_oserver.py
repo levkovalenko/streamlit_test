@@ -142,6 +142,8 @@ with tab1:
 
 with tab2:
     A, B, C, N, s, symS, symA, symC, symB = task_state(" ")
+    A = A.T
+    symA = sym.Matrix(A)
     s1 = st.number_input("$ s_1$", value=-1)
     s2 = st.number_input("$ s_2$", value=-1)
     y0 = s1 * s2
