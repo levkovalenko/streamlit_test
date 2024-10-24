@@ -167,7 +167,12 @@ with tab3:
 
     zlay_point = []
     for i, si in enumerate(spec):
+        print(type(si), si)
+        if isinstance(si, np.complex128):
+            si = si.real
+
         si = round(si)
+
         latex_eq(f"s_{i} = {si}")
         symSpecS = sym.diag(si, si, si) - symA
         symR = symSpecS.row_insert(4, symC)
