@@ -2,6 +2,10 @@ nbformat==5.9.2
 numpy==1.26.2
 pandas==2.2.3
 rpds-py==0.13.2
+scikit-learn==1.6.1
 scipy==1.11.4
 streamlit==1.39.0
 sympy==1.13.3
+plotly==5.18.0
+tqdm_joblib==0.0.5
+joblib==1.4.2
