@@ -3,3 +3,6 @@
 !*.py
 !*.ipynb
 !requirements.txt
+!pyproject.toml
+!uv.lock
+!README.md

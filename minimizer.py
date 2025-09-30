@@ -5,6 +5,7 @@ from typing import Generic, Self, Type, TypeVar
 import numpy as np
 import numpy.typing as npt
 import plotly.graph_objs as go
+import plotly_express as px
 import streamlit as st
 from joblib import Parallel, delayed
 from scipy.optimize import OptimizeResult, minimize
@@ -200,7 +201,7 @@ class ExponentialExperimentGenerator(ExperimentGenerator[E]):
 
         # Создаем матрицу базисных функций
         t = np.arange(self.vector_size)
-        basis_matrix = np.array([l**t for l in l_true]).T
+        basis_matrix = np.array([lt**t for lt in l_true]).T
 
         # Генерируем целевой вектор f
         f_true = basis_matrix @ g_coeffs
@@ -288,10 +289,12 @@ class ExperimentRunner(Generic[E]):
         fig1.update_layout(
             title="Параметры λ",
             plot_bgcolor="white",
+            colorway=px.colors.qualitative.Plotly,
         )
         fig2.update_layout(
             title="Параметры γ",
             plot_bgcolor="white",
+            colorway=px.colors.qualitative.Plotly,
         )
 
         fig1.update_xaxes(
